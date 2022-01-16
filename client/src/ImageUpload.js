@@ -107,14 +107,14 @@ export default function ImageUpload({ username }) {
         /> */}
         <input
           type="text"
-          placeholder="What's on your mind?"
+          placeholder="Describe your Advertisement ?"
           value={caption}
           onChange={(event) => setCaption(event.target.value)}
           className="upload_caption"
         />
         <input
           type="text"
-          placeholder="Category of Post"
+          placeholder="Category of Advertisement "
           value={category}
           onChange={(event) => setCategory(event.target.value)}
           className="upload_caption"
@@ -137,7 +137,7 @@ export default function ImageUpload({ username }) {
 
         <Button variant="contained" onClick={handleUpload} color="secondary" className={classes.button}
         >
-          Create Post
+          Create Ad
         </Button>
       </div>
 

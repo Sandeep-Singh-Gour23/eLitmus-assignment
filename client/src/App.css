@@ -204,8 +204,8 @@ input{
 .suggested_update{
   margin-top: 2rem;
   /* margin-left: 1rem; */
-  height: 30rem;
-  background-color:white;
+  /* height: 25rem;
+  background-color:white; */
   padding: 1rem;
   font-family: 'Montserrat', sans-serif;
   border-radius: 2px;
@@ -213,7 +213,7 @@ input{
   letter-spacing: 1px;
   position: sticky;
   position: -webkit-sticky;
-  top:15%;
+  top:16%;
   font-weight:500;
 }
 .suggested_text{
