@@ -46,6 +46,7 @@ router.post('/categoryposts/:id', VerifyUserJWT, PostController.CategoryPosts);
 router.post('/addcategory/:id', VerifyUserJWT, PostController.AddCategory);
 router.get('/usercategories', VerifyUserJWT, PostController.UserCategories);
 router.post('/uploadimage', VerifyUserJWT, UserAuthController.UploadImage);
-
+router.post('/editPost', VerifyUserJWT, PostController.EditPosts);
+router.post('/deletePost', VerifyUserJWT, PostController.DeletePost);
 
 module.exports = router;
