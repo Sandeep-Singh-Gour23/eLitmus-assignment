@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Post from "./Post";
+import side from "./undraw_online_ad_re_ol62.svg";
 // import Story from "./Story";
 // import SearchIcon from "@material-ui/icons/Search";
 import "./Story.css";
@@ -196,36 +197,15 @@ function App() {
   const renderHome = () => {
     return (
       <div style={{"display":"flex","flex-direction":"row-reverse","justifyContent":"space-between"}}>
-        <div style={{}}>
-        {/* <Suggested /> */}
-       <div className="suggested_update">
-          <div className="suggested_text">
-            <h1>eLitmus Assesment</h1>
-            <br />
-            <h3>Features to be included:</h3>
-            <ol>
-                      <li>User Flow:</li>
-                        <ul>
-                            <li>Register</li>
-                            <li>Login</li>
-                            <li>Logout</li>
-                        </ul>
-                       <li>Interface where user can:</li>
-                         <ul>
-                             <li>Create Advertisement</li>
-                             <li>Publish Advertisement</li>
-                             <li>Edit Advertisement</li>
-                             <li>View Advertisement</li>
-                             <li>Delete Advertisement</li>
-                         </ul> 
-                         <li>Show all the published Advertisement on the homepage</li>
-                         <li>Registered user should be able to comment on Advertisement</li>
-                         <li>REST API-based architecture</li>
-                    </ol>
-          </div>
-       </div>
+      <div style={{}}>
+      {/* <Suggested /> */}
+     <div className="suggested_update">
+        <div className="suggested_text">
+           <img src={side} alt="side-img" style={{width:'45rem',height:'48rem'}}/>
         </div>
-        <div style={{"marginLeft":"11%"}}>
+     </div>
+      </div>
+       <div style={{"marginLeft":"11%"}}>
       
         {categorydata ? <div className="story">
           {
@@ -320,7 +300,7 @@ function App() {
                 src="/images/logo.png"
                 alt="instagram"
               /> */}
-              <h2 className="modal__headerImage">RankInterest</h2>
+              <h2 className="modal__headerImage">SignUp</h2>
             </center>
             <Input
               type="text"
@@ -379,7 +359,7 @@ function App() {
                 src="/images/logo.png"
                 alt="instagram"
               /> */}
-              <h2 className="modal__headerImage">RankInterest</h2>
+              <h2 className="modal__headerImage">SignIn</h2>
 
             </center>
 
