@@ -383,6 +383,40 @@ const UserCategories = async (req, res) => {
 //   }
 // }
 
+const EditPosts = async (req, res) => {
+  //  console.log("body data"+req.body);
+  let { postId,postContent } = req.body;
+  // let {postContent}= req.user;
+  // console.log("userId   "+userId);
+
+  let [cat_postupdatingError, posts_updated] = await to(
+    Post.query()
+      .update({postContent:postContent})
+      .where('postId',postId).returning("*")    
+  );
+  if (cat_postupdatingError) badRequestError(res, cat_postupdatingError, "unable to fetch post");
+  return okResponse(res, posts_updated, "user posts detail updated ");
+  
+
+};
+
+const DeletePost = async (req, res) => {
+  //  console.log("body data"+req.body);
+  let { postId} = req.body;
+  // let {postContent}= req.user;
+  // console.log("userId   "+userId);
+
+  let [cat_postupdatingError, posts_updated] = await to(
+    Post.query()
+      .delete()
+      .where('postId',postId).returning("*")    
+  );
+  if (cat_postupdatingError) badRequestError(res, cat_postupdatingError, "unable to fetch post");
+  return okResponse(res, posts_updated, " posts deleted succesfully");
+  
+
+};
+
 module.exports = {
   InsertPost,
   InsertLike,
@@ -392,6 +426,8 @@ module.exports = {
   AddCategory,
   UserCategories,
   AllPosts,
-  SearchUser
+  SearchUser,
+  EditPosts,
+  DeletePost
 
 }
